@@ -2,32 +2,32 @@
 using namespace std;
 
 int main() {
-    string texto;
-    cin >> texto;
-    
-    int puntos = 0;
-    int posicion = 0;
-    int longitud = texto.length();
-    
-    while (posicion < longitud) {
-        if (posicion + 5 <= longitud && texto.substr(posicion, 5) == "boooo") {
-            puntos -= 1;
-            posicion += 5;
-        }
-        else if (posicion + 5 <= longitud && texto.substr(posicion, 5) == "bravo") {
-            puntos += 3;
-            posicion += 5;
-        }
-        else if (posicion + 2 <= longitud && texto.substr(posicion, 2) == "ha") {
-            puntos += 1;
-            posicion += 2;
-        }
-        else {
-            posicion++;
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+
+    string S;
+    cin >> S;
+
+    int score = 0;
+    int i = 0;
+
+    while (i < S.size()) {
+        if (S.substr(i, 5) == "bravo") {
+            score += 3;
+            i += 5;
+        } else if (S.substr(i, 5) == "boooo") {
+            score -= 1;
+            i += 5;
+        } else if (S.substr(i, 2) == "ha") {
+            score += 1;
+            i += 2;
+        } else {
+            i++;
         }
     }
-    
-    cout << puntos << endl;
-    
+
+    cout << score << "\n";
     return 0;
 }
+
+
