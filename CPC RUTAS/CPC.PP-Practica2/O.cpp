@@ -6,10 +6,9 @@ typedef long long ll;
 
 int main(){
     fast_io;
-    ll a, b, n; cin >> a >> b >> n;
-    ll minVal = min(a, b);
-    ll maxVal = max(a, b);
-    if(n >= minVal && n <= maxVal)cout << "YES" << nl;
-    else cout << "NO" << nl;
+    ll n;cin>>n;
+    if(n%400 == 0)cout<<"YES"<<nl;
+    else if(n%4==0 && n%100 != 0)cout<<"YES"<<nl;
+    else cout<<"NO"<<nl;
     return 0;
 }

@@ -6,10 +6,12 @@ typedef long long ll;
 
 int main(){
     fast_io;
-    ll a, b, n; cin >> a >> b >> n;
-    ll minVal = min(a, b);
-    ll maxVal = max(a, b);
-    if(n >= minVal && n <= maxVal)cout << "YES" << nl;
-    else cout << "NO" << nl;
+    ll n=0;cin>>n;
+    ll factorial = 1;
+    if(n>=5) cout<<0<<nl;
+    else{
+        for(int i = 1; i<=n;i++) factorial*=i;
+        cout<<factorial %10<<nl;
+    }
     return 0;
 }
