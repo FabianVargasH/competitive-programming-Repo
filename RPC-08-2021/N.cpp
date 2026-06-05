@@ -7,16 +7,16 @@ int main() {
     fast_io;
     int cantidadProfesores;
     cin >> cantidadProfesores;
-    vector<int> conteoTotalNotas(6, 0);  // Total de A..F en toda la universidad
+    vector<int> conteoTotalNotas(6, 0);  
     while (cantidadProfesores--) {
         int cantidadEstudiantes;
         cin >> cantidadEstudiantes;
-        vector<int> conteoNotasProfesor(6, 0); // Conteo A..F por profesor
+        vector<int> conteoNotasProfesor(6, 0); 
         for (int i = 0; i < cantidadEstudiantes; i++) {
             char nota;
             cin >> nota;
 
-            int indiceNota = nota - 'A'; // A=0, B=1, ..., F=5
+            int indiceNota = nota - 'A'; 
             conteoNotasProfesor[indiceNota]++;
             conteoTotalNotas[indiceNota]++;
         }
