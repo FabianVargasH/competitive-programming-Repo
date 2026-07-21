@@ -14,6 +14,5 @@ int main() {
     int dist = max(abs(r - center), abs(c - center));
     int score = max(0, 100 - dist * 10);
     cout << score << endl;
-    
     return 0;
 }

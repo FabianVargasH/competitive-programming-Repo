@@ -15,8 +15,6 @@ int main() {
         }
         char last = ' ';
         string line = "";
-        
-        
         for(int j=0;j<s.size();j++) {
             
             if(48<=(int)s[j] && (int)s[j]<=57 && last!='{' && last == ' ') {
@@ -26,7 +24,6 @@ int main() {
                     num += s[x];
                     x++;
                 }
-                
                 if(x<s.size() ){
                     if(s[x] != ' '){
                         line += num;
@@ -35,7 +32,6 @@ int main() {
                         continue;
                     }
                 }
-                
                 int total_ceros =0;
                 for(int k=num.size()-1;k>=0;k--) {
                     if(num[k]=='0') {
@@ -60,7 +56,6 @@ int main() {
                     num2 += num[k];
                 num2+="\\cdot10^{" + to_string(num.size()-1)+'}';
                 }
-                
                 line += num2;
                 j+=num.size()-1;
             } else {

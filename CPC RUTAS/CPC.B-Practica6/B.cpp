@@ -1,18 +1,16 @@
-#include <bits./stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 #define nl '\n'
 #define fast_io ios::sync_with_stdio(false); cin.tie(0);
 
-int main(){
+int main (){
     fast_io;
-    int t;cin>>t;
+    ll t;cin>>t;
+    ll a= 0,b = 0;
     while(t--){
-        ll n;cin>>n;
-        ll m;cin>>m;
-        
+        cin>>a>>b;
+        cout<<(a^b)<<nl;
     }
-
-
     return 0;
 }
