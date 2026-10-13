@@ -21,7 +21,7 @@ int main(){
     fast_io;
     //ll t;cin>>t;
     //while(t--){}
-    solve()
+    solve();
 
     return 0;
 }
